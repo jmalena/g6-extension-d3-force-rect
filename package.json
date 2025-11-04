@@ -1,0 +1,40 @@
+{
+  "name": "g6-extension-better-d3-force",
+  "version": "0.1.0",
+  "description": "A G6 layout extension of the force-directed layout, based on d3-force.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "format": "prettier 'src/**/*.{js,json,ts}' --write",
+    "lint": "eslint src",
+    "prepare": "npm run build",
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmalena/g6-extension-better-d3-force.git"
+  },
+  "keywords": [
+    "antv",
+    "g6",
+    "extension",
+    "layout"
+  ],
+  "author": "Jonáš Malena <jonas.malena@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jmalena/g6-extension-better-d3-force/issues"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@types/jest": "^29.5.14",
+    "eslint": "^9.20.1",
+    "jest": "^29.7.0",
+    "prettier": "3.5.1",
+    "ts-jest": "^29.2.5",
+    "tsc-alias": "^1.8.10",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.1"
+  }
+}
