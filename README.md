@@ -1,6 +1,6 @@
 # g6-extension-d3-force-rect
 
-A G6 layout extension of the force-directed layout with support for rectangular collisions. The package provides the same options as the [`d3-force`](https://g6.antv.antgroup.com/en/manual/layout/d3-force-layout) layout, with the only difference being that it uses `collide.size` for instead of `collide.radius`.
+A G6 layout extension of the force-directed layout with support for rectangular collisions. The package provides the same options as the [`d3-force`](https://g6.antv.antgroup.com/en/manual/layout/d3-force-layout) layout, with the only difference being that it uses `collide.size` for collisions instead of `collide.radius`.
 
 # Installation
 
