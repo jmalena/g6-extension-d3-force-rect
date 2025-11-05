@@ -3,7 +3,6 @@ import { deepMix, pick } from "@antv/util";
 import {
   type Simulation,
   forceCenter,
-  forceCollide,
   ForceLink,
   forceLink,
   forceManyBody,
@@ -13,6 +12,7 @@ import {
   forceY,
 } from "d3-force";
 import type { Graph, LayoutMapping, LayoutWithIterations } from "@antv/layout";
+import { rectCollide } from "./collide";
 import type {
   BetterD3ForceLayoutOptions,
   EdgeDatum,
@@ -46,7 +46,7 @@ export class BetterD3ForceLayout<
     link: forceLink,
     manyBody: forceManyBody,
     center: forceCenter,
-    collide: forceCollide,
+    collide: rectCollide,
     radial: forceRadial,
     x: forceX,
     y: forceY,
@@ -123,9 +123,9 @@ export class BetterD3ForceLayout<
     const _ = deepMix({}, this.options, options) as T;
 
     // process nodeSize
-    if (_.collide && _.collide?.radius === undefined) {
+    if (_.collide && _.collide?.size === undefined) {
       _.collide = _.collide || {};
-      _.collide.radius = _.nodeSize ?? 10;
+      _.collide.size = _.nodeSize ?? [10, 10];
     }
 
     // process iterations

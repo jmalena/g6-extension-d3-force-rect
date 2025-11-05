@@ -7,13 +7,17 @@ import type { EdgeData, LayoutMapping, NodeData } from "@antv/layout";
 
 export interface BetterD3ForceLayoutOptions {
   /**
-   * Node size (diameter). Used for collision detection when nodes overlap.
+   * Node size (rectangle). Used for collision detection when nodes overlap.
    *
-   * @defaultValue 10
+   * @defaultValue [10, 10]
    */
   nodeSize?:
-    | number
-    | ((node: NodeDatum, index: number, nodes: NodeDatum[]) => number);
+    | [number, number]
+    | ((
+        node: NodeDatum,
+        index: number,
+        nodes: NodeDatum[],
+      ) => [number, number]);
 
   /**
    * Callback executed on each tick.
@@ -81,16 +85,13 @@ export interface BetterD3ForceLayoutOptions {
   collide?:
     | false
     | {
-        rectangle?:
-          | number
+        size?:
+          | [number, number]
           | ((
               node: NodeDatum,
               index: number,
               nodes: NodeDatum[],
             ) => [number, number]);
-        radius?:
-          | number
-          | ((node: NodeDatum, index: number, nodes: NodeDatum[]) => number);
         strength?: number;
         iterations?: number;
       };
