@@ -1,7 +1,7 @@
 {
-  "name": "g6-extension-better-d3-force",
+  "name": "g6-extension-d3-force-rect",
   "version": "0.1.0",
-  "description": "A G6 layout extension of the force-directed layout, based on d3-force.",
+  "description": "A G6 layout extension of the force-directed layout with support for rectangular collisions",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jmalena/g6-extension-better-d3-force.git"
+    "url": "git+https://github.com/jmalena/g6-extension-d3-force-rect.git"
   },
   "keywords": [
     "antv",
@@ -24,7 +24,7 @@
   "author": "Jonáš Malena <jonas.malena@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jmalena/g6-extension-better-d3-force/issues"
+    "url": "https://github.com/jmalena/g6-extension-d3-force-rect/issues"
   },
   "dependencies": {
     "@antv/graphlib": "^2.0.0",

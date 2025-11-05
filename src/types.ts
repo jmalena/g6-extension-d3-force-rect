@@ -5,7 +5,7 @@ import type {
 } from "d3-force";
 import type { EdgeData, LayoutMapping, NodeData } from "@antv/layout";
 
-export interface BetterD3ForceLayoutOptions {
+export interface D3ForceRectLayoutOptions {
   /**
    * Node size (rectangle). Used for collision detection when nodes overlap.
    *

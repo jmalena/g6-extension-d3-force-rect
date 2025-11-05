@@ -13,17 +13,13 @@ import {
 } from "d3-force";
 import type { Graph, LayoutMapping, LayoutWithIterations } from "@antv/layout";
 import { rectCollide } from "./collide";
-import type {
-  BetterD3ForceLayoutOptions,
-  EdgeDatum,
-  NodeDatum,
-} from "/~/types";
+import type { D3ForceRectLayoutOptions, EdgeDatum, NodeDatum } from "/~/types";
 
-export class BetterD3ForceLayout<
-  T extends BetterD3ForceLayoutOptions = BetterD3ForceLayoutOptions,
+export class D3ForceRectLayout<
+  T extends D3ForceRectLayoutOptions = D3ForceRectLayoutOptions,
 > implements LayoutWithIterations<T>
 {
-  public id = "better-d3-force";
+  public id = "d3-force-rect";
 
   public simulation: Simulation<NodeDatum, EdgeDatum>;
 
