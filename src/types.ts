@@ -1,9 +1,9 @@
+import type { EdgeData, LayoutMapping, NodeData } from "@antv/layout";
 import type {
   Simulation,
   SimulationLinkDatum,
   SimulationNodeDatum,
 } from "d3-force";
-import type { EdgeData, LayoutMapping, NodeData } from "@antv/layout";
 
 export interface D3ForceRectLayoutOptions {
   /**

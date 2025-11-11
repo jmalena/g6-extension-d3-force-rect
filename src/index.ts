@@ -1,5 +1,6 @@
 import type { ID } from "@antv/graphlib";
 import * as util from "@antv/util";
+import type { Graph, LayoutMapping, LayoutWithIterations } from "@antv/layout";
 import {
   type Simulation,
   forceCenter,
@@ -11,8 +12,7 @@ import {
   forceX,
   forceY,
 } from "d3-force";
-import type { Graph, LayoutMapping, LayoutWithIterations } from "@antv/layout";
-import { rectCollide } from "./collide";
+import { rectCollide } from "/~/collide";
 import type { D3ForceRectLayoutOptions, EdgeDatum, NodeDatum } from "/~/types";
 
 export class D3ForceRectLayout<
