@@ -1,6 +1,6 @@
 {
   "name": "g6-extension-d3-force-rect",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A G6 layout extension of the force-directed layout with support for rectangular collisions",
   "type": "module",
   "exports": {
