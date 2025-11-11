@@ -1,5 +1,5 @@
 import type { ID } from "@antv/graphlib";
-import { deepMix, pick } from "@antv/util";
+import * as util from "@antv/util";
 import {
   type Simulation,
   forceCenter,
@@ -74,7 +74,7 @@ export class D3ForceRectLayout<
   };
 
   constructor(options?: Partial<T>) {
-    deepMix(this.options, options);
+    util.deepMix(this.options, options);
 
     if (this.options.forceSimulation) {
       this.simulation = this.options.forceSimulation;
@@ -116,7 +116,7 @@ export class D3ForceRectLayout<
   }
 
   protected getOptions(options: Partial<T>): T {
-    const _ = deepMix({}, this.options, options) as T;
+    const _ = util.deepMix({}, this.options, options) as T;
 
     // process nodeSize
     if (_.collide && _.collide?.size === undefined) {
@@ -150,7 +150,7 @@ export class D3ForceRectLayout<
     const nodes = graph.getAllNodes().map(({ id, data }) => ({
       id,
       ...data,
-      ...pick(data.data, this.config.inputNodeAttrs),
+      ...util.pick(data.data, this.config.inputNodeAttrs),
     }));
 
     const edges = graph.getAllEdges().map((edge) => ({ ...edge }));
@@ -176,7 +176,7 @@ export class D3ForceRectLayout<
       id: node.id,
       data: {
         ...node.data,
-        ...pick(node, this.config.outputNodeAttrs),
+        ...util.pick(node, this.config.outputNodeAttrs),
       },
     }));
 
