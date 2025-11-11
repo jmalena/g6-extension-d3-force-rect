@@ -12,7 +12,7 @@
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc && tsc-alias",
+    "build": "tsc && tsc-alias --resolve-full-paths",
     "format": "prettier 'src/**/*.{js,json,ts}' --write",
     "lint": "eslint src",
     "prepare": "npm run build",
