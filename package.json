@@ -2,8 +2,15 @@
   "name": "g6-extension-d3-force-rect",
   "version": "0.1.0",
   "description": "A G6 layout extension of the force-directed layout with support for rectangular collisions",
-  "main": "dist/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
   "types": "dist/index.d.ts",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc && tsc-alias",
     "format": "prettier 'src/**/*.{js,json,ts}' --write",
