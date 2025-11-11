@@ -26,6 +26,9 @@
   "bugs": {
     "url": "https://github.com/jmalena/g6-extension-d3-force-rect/issues"
   },
+  "peerDependencies": {
+    "@antv/g6": ">=5.0.0"
+  },
   "dependencies": {
     "@antv/graphlib": "^2.0.0",
     "@antv/layout": "1.2.14-beta.8",
