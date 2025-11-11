@@ -24,6 +24,7 @@
   },
   "keywords": [
     "antv",
+    "d3-force",
     "g6",
     "extension",
     "layout"
